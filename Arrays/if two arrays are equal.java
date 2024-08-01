@@ -1,4 +1,4 @@
-
+//simply  write a==b in condition
 import java.util.Arrays ; 
 public class Main
 {
