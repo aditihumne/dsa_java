@@ -1,0 +1,21 @@
+/* Given an integer number n, return the difference between the product of its digits and the sum of its digits.*/
+
+class Solution {
+    int a= 1 ;
+    int b = 0;
+    public int subtractProductAndSum(int n) {
+        int product = 1;
+        int sum = 0 ; 
+        while (n>0){
+            int num = n%10 ; 
+            product = product*num;
+            sum = sum + num ;
+            n = n/10 ;
+        }
+       return product -sum ;
+
+        
+
+        
+    }
+}
