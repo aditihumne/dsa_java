@@ -1,0 +1,23 @@
+/* A subarray is defined as a contiguous sequence of numbers in an array.
+
+A subarray [numsl, numsl+1, ..., numsr-1, numsr] is ascending if for all i where l <= i < r, numsi  < numsi+1. Note that a subarray of size 1 is ascending.
+*/
+ class Solution {
+    public int maxAscendingSum(int[] nums) {
+        int currentsum =nums[0];
+        int maxsum= nums[0];
+        for(int i = 1 ; i<nums.length ; i++){
+            if(nums[i-1]<nums[i]){
+                currentsum = currentsum + nums[i];
+            }else {
+                maxsum=Math.max(currentsum , maxsum);// return maximum sum and place in maxsum
+                currentsum = nums[i]; //to start a new subarray
+            }
+            
+          
+            
+        }
+        maxsum=Math.max(currentsum , maxsum);// dusri baar loop chalne pe bas if part chalega not else so currentsum, maxsum me konsa bada ha compare krne ke liye wapas likha
+        return maxsum ;
+    }
+}
