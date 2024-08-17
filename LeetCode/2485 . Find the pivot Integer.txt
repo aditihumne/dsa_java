@@ -7,7 +7,7 @@ Return the pivot integer x. If no such integer exists, return -1. It is guarante
 
 class Solution {
     public int pivotInteger(int n) {
-        int totalsum = (n*(n+1))/2 ;
+        int totalsum = (n*(n+1))/2 ;       //to find the sum from 1 to n 
         for(int i = 0 ; i<=n ; i++){
             long  left = (i*(i+1))/2;
             long right = totalsum -left +i ; 
